@@ -4,13 +4,13 @@
 
 <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3">Add Company</div>
+        <div class="breadcrumb-title pe-3">Add {{$nav}}</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                     <li class="breadcrumb-item"><a href="{{route('dashboard')}}"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Add Company</li>
+                    <li class="breadcrumb-item active" aria-current="page">Add {{$nav}}</li>
                 </ol>
             </nav>
         </div>
@@ -36,38 +36,32 @@
                         </div>
                         <div class="card-body">
                           <div class="row g-3">
-                            <div class="col-12 form-group">
-                                            <div class="box-for-image  main-image">
-                                                <div class="form-field-here add-product-image">
-                                                    <label class="input-label">Slider - (Max image size 2MB, 
-                                                        Approx: 1970px x 770px)
-                                                    <span style="color: red">*</span></label> 
-                                                    <div class="store-logo profile">
-                                                        <img class="" src="{{asset('assets/images/upload-image.jpg')}}">
-                                                    </div>
-                                                    <input type="file" id="add-pencil-icon" name="image" class="btn-pencil-icon">
-                                                </div>
-                                            </div>
-                                        </div>
-                                     
-							 
-							 
+                            
+							 <link type="image/png" sizes="96x96" rel="icon" href=".../icons8-dinner-96.png">
                              <div class="col-6 form-group">
-                                <label class="form-label">Title <span>*</span></label>
-                                <input type="text" name="title" id="title" class="form-control 
-                                @error('title') is-invalid @enderror" value="{{ old('title') }}">
+                                <label class="form-label">Name <span>*</span></label>
+                                <input type="text" name="name" id="name" class="form-control 
+                                @error('name') is-invalid @enderror" value="{{ old('name') }}">
                             </div>
                           
                              <div class="col-6 form-group">
-                              <label class="form-label">Link <span>*</span></label>
-                              <input type="url" name="link" id="link" class="form-control 
-                              @error('link') is-invalid @enderror" value="{{ old('link') }}">
+                              <label class="form-label">icon <a target="_blank" href="https://www.flaticon.com/">icon code link</a> <span>*</span></label>
+                              <input type="text" name="icon" id="icon" class="form-control 
+                              @error('icon') is-invalid @enderror" value="{{ old('icon') }}">
                             </div> 
                                                      
                             <div class="col-12 form-group">
                                 <label class="form-label">Short Description <span>*</span></label>
                                 <input type="text" name="short_description" id="short_description" class="form-control
                                  @error('short_description') is-invalid @enderror" value="{{ old('short_description') }}">
+                            </div>
+
+                            <div class="col-12 form-group">
+                                <label>Status</label><br>
+                                <label class="switch">
+                                  <input type="checkbox" name="status" checked>
+                                  <span class="slider round"></span>
+                                </label>
                             </div>
                             
                            

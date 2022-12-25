@@ -3,20 +3,19 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Slider;
 use Illuminate\Http\Request;
+use App\Models\Service;
 
-class SliderController extends Controller
+class ServiceController extends Controller
 {
     
 
     public function list()
     {
-        $data['company_fields'] = [];
-        $data['companiesData'] = [];
-        $data['nav'] = "Slider";
-        $data['data'] = Slider::latest()->get();
-        return view('backend.slider.list',$data);
+      
+        $data['nav'] = "Service";
+        $data['data'] = Service::latest()->paginate(10);
+        return view('backend.service.list',$data);
 
     }
 
@@ -24,22 +23,22 @@ class SliderController extends Controller
     {
         $data['company_fields'] = [];
         $data['companiesData'] = [];
-        $data['nav'] = "Slider";
+        $data['nav'] = "Service";
 
         if($request->isMethod('get')){
-            return view('backend.slider.create',$data);
+            return view('backend.service.create',$data);
         }else{
           
-            if($request->image)
-          $image_path = $this->image_upload($request->image);
-          else
-          $image_path = "";
 
-          // $values = $request->all(); 
+          $values = $request->all(); 
           $values['image']  = $image_path;
           if(isset($values['_token'])){
             unset($values['_token']);
           }      
+
+          dd($request->all());
+
+          
             Slider::insert($values);
             return redirect()->route('slider_list')->with("success","Successfully Added");;
         }

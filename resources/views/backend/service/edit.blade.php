@@ -4,19 +4,20 @@
 
 <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3">Add Company</div>
+        <div class="breadcrumb-title pe-3">Edit Company</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                     <li class="breadcrumb-item"><a href="{{route('dashboard')}}"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Add Company</li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit Company</li>
                 </ol>
             </nav>
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('company.index')}}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Manage Company</a>
+                <a href="{{route('slider_list')}}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> 
+                    Back to {{$nav}}</a>
             </div>
         </div>
     </div>
@@ -28,7 +29,7 @@
                   <form class="customer_form"  method="post" enctype="multipart/form-data">
                     @csrf
                   <div class="card-body">
-                      <h5 class="mb-0">Add {{$nav}}</h5>
+                      <h5 class="mb-0">Edit {{$nav}}</h5>
                       <hr>
                       <div class="card shadow-none border">
                         <div class="card-header">
@@ -43,7 +44,11 @@
                                                         Approx: 1970px x 770px)
                                                     <span style="color: red">*</span></label> 
                                                     <div class="store-logo profile">
-                                                        <img class="" src="{{asset('assets/images/upload-image.jpg')}}">
+                                @if(File::exists("$data->image"))
+                                <img class="" src="{{url('/')}}/{{$data->image}}">
+                                @else
+                                <img class="" src="{{asset('assets/images/upload-image.jpg')}}">
+                                @endif
                                                     </div>
                                                     <input type="file" id="add-pencil-icon" name="image" class="btn-pencil-icon">
                                                 </div>
@@ -55,19 +60,20 @@
                              <div class="col-6 form-group">
                                 <label class="form-label">Title <span>*</span></label>
                                 <input type="text" name="title" id="title" class="form-control 
-                                @error('title') is-invalid @enderror" value="{{ old('title') }}">
+                                @error('title') is-invalid @enderror" value="{{ $data->title }}">
                             </div>
                           
                              <div class="col-6 form-group">
                               <label class="form-label">Link <span>*</span></label>
                               <input type="url" name="link" id="link" class="form-control 
-                              @error('link') is-invalid @enderror" value="{{ old('link') }}">
+                              @error('link') is-invalid @enderror" value="{{ $data->link }}">
                             </div> 
                                                      
                             <div class="col-12 form-group">
                                 <label class="form-label">Short Description <span>*</span></label>
                                 <input type="text" name="short_description" id="short_description" class="form-control
-                                 @error('short_description') is-invalid @enderror" value="{{ old('short_description') }}">
+                                 @error('short_description') is-invalid @enderror" 
+                                 value="{{ $data->short_description }}">
                             </div>
                             
                            
@@ -76,7 +82,7 @@
                         </div>
                       </div>
                       <div class="text-end">
-                        <button type="submit" class="btn btn-success px-4"><b>+</b> Submit</button>
+                        <button type="submit" class="btn btn-success px-4"><b>+</b> Update</button>
                       </div>
                 </form>
                 </div>
