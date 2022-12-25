@@ -17,3 +17,4 @@ Route::group(['prefix'=>'blog','as'=>'blog_'],function(){
     Route::any('/delete/{id}',[BlogController::class, 'Delete'])->name('delete');
     });
     
+

@@ -16,7 +16,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('company.index')}}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Manage Company</a>
+                <a href="{{route('company.index')}}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Manage {{$nav}}</a>
             </div>
         </div>
     </div>
@@ -40,26 +40,26 @@
 							 <link type="image/png" sizes="96x96" rel="icon" href=".../icons8-dinner-96.png">
                              <div class="col-6 form-group">
                                 <label class="form-label">Name <span>*</span></label>
-                                <input type="text" name="name" id="name" class="form-control 
+                                <input type="text" name="name" placeholder="Name" id="name" class="form-control 
                                 @error('name') is-invalid @enderror" value="{{ old('name') }}">
                             </div>
                           
                              <div class="col-6 form-group">
-                              <label class="form-label">icon <a target="_blank" href="https://www.flaticon.com/">icon code link</a> <span>*</span></label>
+                              <label class="form-label">icon <a target="_blank" href="https://fontawesome.com/search?m=free&o=r">icon code link</a> <span>*</span></label>
                               <input type="text" name="icon" id="icon" class="form-control 
-                              @error('icon') is-invalid @enderror" value="{{ old('icon') }}">
+                              @error('icon') is-invalid @enderror" placeholder="fa-solid fa-location-dot" value="{{ old('icon') }}">
                             </div> 
                                                      
                             <div class="col-12 form-group">
                                 <label class="form-label">Short Description <span>*</span></label>
-                                <input type="text" name="short_description" id="short_description" class="form-control
+                                <input type="text" name="short_description" placeholder="Short Description" id="short_description" class="form-control
                                  @error('short_description') is-invalid @enderror" value="{{ old('short_description') }}">
                             </div>
 
                             <div class="col-12 form-group">
                                 <label>Status</label><br>
                                 <label class="switch">
-                                  <input type="checkbox" name="status" checked>
+                                  <input type="checkbox" name="status" value="1" checked>
                                   <span class="slider round"></span>
                                 </label>
                             </div>

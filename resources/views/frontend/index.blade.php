@@ -92,7 +92,7 @@ apartment, guest house, or tree house, we’ve got you covered.</p>
 <div class="row">
 <div class="col-lg-12">
 <div class="section-title">
-<span>What We Do</span>
+<span>What We Do </span>
 <h2>Discover Our Services</h2>
 </div>
 </div>
@@ -101,6 +101,7 @@ apartment, guest house, or tree house, we’ve got you covered.</p>
 <div class="col-lg-4 col-sm-6">
 <div class="service-item">
 <i class="flaticon-036-parking"></i>
+
 <h4>Travel Plan</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna.</p>
@@ -108,7 +109,7 @@ labore et dolore magna.</p>
 </div>
 <div class="col-lg-4 col-sm-6">
 <div class="service-item">
-<i class="flaticon-033-dinner"></i>
+<i style="font-size: 60px;" class="fa-solid fa-utensils"></i>
 <h4>Catering Service</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna.</p>

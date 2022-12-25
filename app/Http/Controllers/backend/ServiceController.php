@@ -31,58 +31,50 @@ class ServiceController extends Controller
           
 
           $values = $request->all(); 
-          $values['image']  = $image_path;
+          $values['status'] = $request->status ? $request->status : 0;
           if(isset($values['_token'])){
             unset($values['_token']);
           }      
 
-          dd($request->all());
-
-          
-            Slider::insert($values);
-            return redirect()->route('slider_list')->with("success","Successfully Added");;
+            Service::insert($values);
+            return redirect()->route('service_list')->with("success","Successfully Added");;
         }
 
     }
 
     public function Edit(Request $request,$id)
     {
-        $data['company_fields'] = [];
-        $data['companiesData'] = [];
-        $data['nav'] = "Slider";
-        $data['data'] = Slider::find(decrypt($id));
+     
+        $data['nav'] = "Service";
+        $data['data'] = Service::find(decrypt($id));
 
         if($request->isMethod('get')){
-            return view('backend.slider.edit',$data);
+            return view('backend.service.edit',$data);
         }else{
           
-            if($request->image){
-                $image_path = $this->image_upload($request->image);
-            }else{
-          $image_path = $data['data']->image;
-            }
+         
           $values = $request->all(); 
-          $values['image']  = $image_path;
+          $values['status'] = $request->status ? $request->status : 0;
+
           if(isset($values['_token'])){
             unset($values['_token']);
           }    
           
-        //   dd($values);
-            // Slider::insert($values);
+          // dd($values);
             $data['data']->fill($values)->save();
-            return redirect()->route('slider_list')->with("success","Successfully Updated");
+            return redirect()->route('service_list')->with("success","Successfully Updated");
         }
 
     }
 
     public function Delete(Request $request,$id)
     {
-         $data['data'] = Slider::find(decrypt($id));
+         $data['data'] = Service::find(decrypt($id));
          if($data['data']){
             $data['data']->delete();
-            return redirect()->route('slider_list')->with("success","Successfully Deleted");
+            return redirect()->route('service_list')->with("success","Successfully Deleted");
          }else{
-            return redirect()->route('slider_list')->with("error","Something went wrong");
+            return redirect()->route('service_list')->with("error","Something went wrong");
          }
 
         
