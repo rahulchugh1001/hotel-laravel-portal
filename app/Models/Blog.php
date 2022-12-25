@@ -6,26 +6,31 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Helper;
 
-class JobCategory extends Model
+class Blog extends Model
 {
     use HasFactory;
 	
-	protected $table="job_category";
+	protected $table="blog";
 
     protected $fillable = [
         'title',
         'description',
-        'status'
+        'category_id',
+        'slug',
+        'thumbnail_image',
+        'banner_image',
+        'status',
+        'publish_by'
     ];
 
 
     public static function getName($id)
     {
     
-    $category=Self::find($id);
-    if($category)
+    $blog=Self::find($id);
+    if($blog)
     {
-        return $category->title;
+        return $blog->title;
     }else
         
         {
