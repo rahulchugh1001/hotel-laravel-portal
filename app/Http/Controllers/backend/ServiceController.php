@@ -14,7 +14,7 @@ class ServiceController extends Controller
     {
       
         $data['nav'] = "Service";
-        $data['data'] = Service::latest()->paginate(10);
+        $data['data'] = Service::latest()->get();
         return view('backend.service.list',$data);
 
     }

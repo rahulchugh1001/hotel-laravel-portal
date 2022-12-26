@@ -35,11 +35,12 @@ class SliderController extends Controller
           else
           $image_path = "";
 
-          // $values = $request->all(); 
+          $values = $request->all(); 
           $values['image']  = $image_path;
           if(isset($values['_token'])){
             unset($values['_token']);
-          }      
+          }     
+
             Slider::insert($values);
             return redirect()->route('slider_list')->with("success","Successfully Added");;
         }

@@ -32,7 +32,7 @@ class DashboardController extends Controller
 			
 			{
 		
-				return view('admin.dashboard');
+				return view('backend.dashboard');
 		
 			}
 		

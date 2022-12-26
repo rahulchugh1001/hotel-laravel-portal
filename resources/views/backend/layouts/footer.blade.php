@@ -105,7 +105,11 @@ Toast.fire({
 })
   </script>
 @endif
-
+<script src="https://harvesthq.github.io/chosen/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+  document.getElementById('output').innerHTML = location.search;
+$(".chosen-select").chosen();
+</script>
 
 </body>
 

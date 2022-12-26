@@ -28,6 +28,7 @@
     <link href="{{asset('assets/css/semi-dark.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/header-colors.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://harvesthq.github.io/chosen/chosen.css">
     <!-- Custom Style -->
 
   <!-- bootstrap validation -->

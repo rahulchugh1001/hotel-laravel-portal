@@ -16,7 +16,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('service_add')}}" class="btn btn-success"><b>+</b> Add {{$nav}}</a>
+                <a href="{{route('room_add')}}" class="btn btn-success"><b>+</b> Add {{$nav}}</a>
             </div>
             
         </div>
@@ -36,8 +36,9 @@
                     <thead class="table-secondary">
                         <tr>
                             <th>S.no</th>
-                            <th>Icon</th>
+                            <th>Image</th>
                             <th>Name</th>
+                            <th>Status</th>
                             <th>Action</th>
                      
                         </tr>
@@ -47,11 +48,16 @@
                         <tr>
                             <td>{{$index + 1}}</td>
                             <td>
-                            <i class="{{$value->icon}}"></i>    
-                            </td>
+                                @if(File::exists("$value->image"))
+                        <img src="{{url('/')}}/{{$value->image}}" width="40px"> 
+                        @else
+                        No Image
+                        @endif
+                                 </td>
                             <td>{{Str::limit($value->name,20)}}</td>
+                            <td>@if($value->status == 1) <span class="text-success">Active</span> @else <span class="text-danger">Inactive</span> @endif</td>
                             <td>
-                                <a href="{{route('service_edit',encrypt($value->id))}}"><i class="bi bi-pencil-fill"></i></a>
+                                <a href="{{route('room_edit',encrypt($value->id))}}"><i class="bi bi-pencil-fill"></i></a>
                             
                                 <a class="text-danger" data-bs-toggle="modal" data-bs-target="#delete{{$index}}" 
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" category="" 
@@ -68,7 +74,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="alert-body">
-                                        <form action="{{route('service_delete',encrypt($value->id))}}">
+                                        <form action="{{route('room_delete',encrypt($value->id))}}">
                                             @csrf
                                         <i class="bi bi-exclamation-circle"></i>
                                         <h5 class="modal-category">Alert</h5>
@@ -83,9 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach   
-
-
+                        @endforeach                       
                     </tbody>
                 </table>
             </div>
