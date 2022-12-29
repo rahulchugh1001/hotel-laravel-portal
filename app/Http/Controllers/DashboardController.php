@@ -24,17 +24,7 @@ class DashboardController extends Controller
     public function index(){
 
        
-        if(User::getRoleLabel(Auth::user()->id)=='candidate')
-		{
-			return view('candidate.dashboard');
-			
-		}else
-			
-			{
-		
 				return view('backend.dashboard');
-		
-			}
 		
 		
     }

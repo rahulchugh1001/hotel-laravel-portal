@@ -43,10 +43,10 @@
                         </div>
                         <div class="card-body">
                           <div class="row g-3">
-                            <div class="col-12 form-group">
+                            <div class="col-6 form-group">
                                             <div class="box-for-image  main-image">
                                                 <div class="form-field-here add-product-image">
-                                                    <label class="input-label">Slider - (Max image size 1MB, 
+                                                    <label class="input-label">Banner Image - (Max image size 1MB, 
                                                         Approx: 770px x 440px)
                                                     <span style="color: red">*</span></label> 
                                                     <div class="store-logo profile">
@@ -55,7 +55,21 @@
                                                     <input type="file" id="add-pencil-icon" name="image" class="btn-pencil-icon">
                                                 </div>
                                             </div>
+                            </div>
+                              <div class="col-6 form-group">
+                                            <div class="box-for-image  main-image">
+                                                <div class="form-field-here add-product-image">
+                                                    <label class="input-label">Background Image - (Max image size 1MB, 
+                                                        Approx: 470px x 600px)
+                                                    <span style="color: red">*</span></label> 
+                                                    <div class="store-logo profile2">
+                                          <img src="{{asset('assets/images/upload-image.jpg')}}">
+                                                    </div>
+                                                    <input type="file" id="add-pencil-icon2" name="background_image" class="btn-pencil-icon">
+                                                </div>
+                                            </div>
                                         </div>
+
                                      
 							 
 							 
@@ -137,30 +151,7 @@
               </div>
               
             </div>
-
-<script type="text/javascript">
-    $('#state').change(function(){
-    var stateId = $(this).val();    
-   
-  if(stateId){
-        $.ajax({
-           type: "GET",
-           url:"{{route('city.index')}}?state_id="+stateId,
-           success:function(data){              
-               $("#city").empty();
-               $.each(data, function(key, value) {
-               $("#city").append('<option value="'+value.id+'">'+value.name+'</option>');
-});
-   
-           }
-        });
-    }else{
-        $("#city").empty();
-       
-    }      
-   });
-   
-</script>    
+    
 <script>
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -177,6 +168,24 @@
         $("#add-pencil-icon").change(function() {
             readURL(this);
         });
+
+
+
+          function readURL2(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('.profile2 > img').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#add-pencil-icon2").change(function() {
+            readURL2(this);
+        });
     </script>
     <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
 <script>
@@ -191,6 +200,11 @@
 
 
  .box-for-image .store-logo.profile {
+    height: 110px;
+    width: 110px;
+    overflow-y: hidden;
+}
+ .box-for-image .store-logo.profile2 {
     height: 110px;
     width: 110px;
     overflow-y: hidden;
@@ -290,6 +304,11 @@ input:focus {
 .box-for-image .store-logo.profile img {
     width: 100%;    
 }
+
+.box-for-image .store-logo.profile2 img {
+    width: 100%;    
+}
+
 
 .filter-blocks.multi-fields-set .input-filter.col-sm-2 {
     padding-right: 0;

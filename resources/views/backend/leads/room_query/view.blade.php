@@ -16,7 +16,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('company.index')}}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Manage Company</a>
+                <a href="{{route('lead_room_query_list')}}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Manage {{$nav}}</a>
             </div>
         </div>
     </div>
@@ -96,29 +96,7 @@
               
             </div>
 
-<script type="text/javascript">
-    $('#state').change(function(){
-    var stateId = $(this).val();    
    
-  if(stateId){
-        $.ajax({
-           type: "GET",
-           url:"{{route('city.index')}}?state_id="+stateId,
-           success:function(data){              
-               $("#city").empty();
-               $.each(data, function(key, value) {
-               $("#city").append('<option value="'+value.id+'">'+value.name+'</option>');
-});
-   
-           }
-        });
-    }else{
-        $("#city").empty();
-       
-    }      
-   });
-   
-</script>    
 <script>
         function readURL(input) {
             if (input.files && input.files[0]) {

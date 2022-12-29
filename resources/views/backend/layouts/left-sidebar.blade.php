@@ -19,7 +19,7 @@
               </a>              
             </li>
             <li>
-              <a href="{{route('users.profile')}}">
+              <a href="#">
                 <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
                 </div>
                 <div class="menu-title">Profle</div>

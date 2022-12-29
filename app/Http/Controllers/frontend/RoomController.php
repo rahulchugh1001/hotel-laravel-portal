@@ -59,7 +59,9 @@ class RoomController extends Controller
 
        
         $data['room'] = Room::where('status',1)->where('slug',$slug)->first();
-        // dd($data['room']);
+        if($data['room'] == false){
+            abort(404);
+        }
 
         if($request->isMethod('get')){
         return view('frontend.room-detail',$data);  

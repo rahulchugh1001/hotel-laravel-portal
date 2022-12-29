@@ -129,30 +129,7 @@
               </div>
               
             </div>
-
-<script type="text/javascript">
-    $('#state').change(function(){
-    var stateId = $(this).val();    
-   
-  if(stateId){
-        $.ajax({
-           type: "GET",
-           url:"{{route('city.index')}}?state_id="+stateId,
-           success:function(data){              
-               $("#city").empty();
-               $.each(data, function(key, value) {
-               $("#city").append('<option value="'+value.id+'">'+value.name+'</option>');
-});
-   
-           }
-        });
-    }else{
-        $("#city").empty();
-       
-    }      
-   });
-   
-</script>    
+  
 <script>
         function readURL(input) {
             if (input.files && input.files[0]) {

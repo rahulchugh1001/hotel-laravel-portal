@@ -37,8 +37,15 @@ class RoomController extends Controller
               else
               $image_path = "";
 
+             if($request->background_image){
+                $bk_image_path = $this->image_upload2($request->background_image);
+                }else{
+              $bk_image_path = "";
+                }
+
           $values = $request->all(); 
           $values['image']  = $image_path;
+          $values['background_image']  = $bk_image_path;
           $values['status']  = $request->status ? $request->status : 0;
           $values['service']  = json_encode($request->service);
           if(isset($values['_token'])){
@@ -67,8 +74,19 @@ class RoomController extends Controller
             }else{
           $image_path = $data['data']->image;
             }
+
+              if($request->background_image){
+                $bk_image_path = $this->image_upload2($request->background_image);
+            }else{
+          $bk_image_path = $data['data']->background_image;
+            }
+
+
           $values = $request->all(); 
           $values['image']  = $image_path;
+          $values['background_image']  = $bk_image_path;
+
+          // dd($values);
           $values['status']  = $request->status ? $request->status : 0;
           $values['service']  = json_encode($request->service);
           if(isset($values['_token'])){
@@ -108,6 +126,22 @@ class RoomController extends Controller
         //mve to destination you mentioned 
        if ($sucess) {
              return 'rooms/'.$name;
+         }
+ 
+         return NULL;
+ 
+     }
+
+        public function image_upload2($image){
+        $name = time().'.'.$image->getClientOriginalExtension(); //get the  file extention
+      
+ 
+        $destinationPath = public_path('/rooms/background/'); //public path folder dir
+        $sucess=$image->move($destinationPath, $name);
+       
+        //mve to destination you mentioned 
+       if ($sucess) {
+             return 'rooms/background/'.$name;
          }
  
          return NULL;
