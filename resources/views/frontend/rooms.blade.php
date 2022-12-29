@@ -21,186 +21,52 @@
 <section class="rooms-section spad">
 <div class="container">
 <div class="row">
+@foreach($room as $data)
 <div class="col-lg-4 col-md-6">
 <div class="room-item">
-<img src="{{asset('frontend/img/room/room-1.jpg')}}" alt="">
+    @if(File::exists($data->image))
+    <img src="{{url('/')}}/{{$data->image}}" alt="">
+   @else
+   No Image Found
+   @endif
 <div class="ri-text">
-<h4>Premium King Room</h4>
-<h3>₹1590<span>/Pernight</span></h3>
+<h4>{{Str::limit($data->name,18)}}</h4>
+<h3>₹{{number_format($data->price)}}<span>/Pernight</span></h3>
 <table>
 <tbody>
 <tr>
 <td class="r-o">Size:</td>
-<td>30 ft</td>
+<td>{{$data->size}}</td>
 </tr>
 <tr>
 <td class="r-o">Capacity:</td>
-<td>Max persion 3</td>
+<td>{{$data->capacity}}</td>
 </tr>
 <tr>
 <td class="r-o">Bed:</td>
-<td>King Beds</td>
+<td>{{$data->bed}}</td>
 </tr>
 <tr>
 <td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
+<td>
+    <!-- json_decode($data->service)[1] -->
+     @for($i = 0; $i <= 1; $i++)
+    @if($i),@endif  {{App\Models\Service::getServiceDetail(json_decode($data->service)[$i])}} 
+    @endfor 
+  
+</td>
 </tr>
 </tbody>
 </table>
-<a href="{{route('roomsdetail')}}" class="primary-btn">More Details</a>
+<a href="{{route('roomsdetail',$data->slug)}}" class="primary-btn">More Details</a>
 </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6">
-<div class="room-item">
-<img src="{{asset('frontend/img/room/room-2.jpg')}}" alt="">
-<div class="ri-text">
-<h4>Deluxe Room</h4>
-<h3>₹1590<span>/Pernight</span></h3>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 5</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="{{route('roomsdetail')}}" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="room-item">
-<img src="{{asset('frontend/img/room/room-3.jpg')}}" alt="">
-<div class="ri-text">
-<h4>Double Room</h4>
-<h3>₹1590<span>/Pernight</span></h3>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 2</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="{{route('roomsdetail')}}" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="room-item">
-<img src="{{asset('frontend/img/room/room-4.jpg')}}" alt="">
-<div class="ri-text">
-<h4>Luxury Room</h4>
-<h3>₹1590<span>/Pernight</span></h3>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 1</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="{{route('roomsdetail')}}" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="room-item">
-<img src="{{asset('frontend/img/room/room-5.jpg')}}" alt="">
- <div class="ri-text">
-<h4>Room With View</h4>
-<h3>₹1590<span>/Pernight</span></h3>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 1</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="{{route('roomsdetail')}}" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="room-item">
-<img src="{{asset('frontend/img/room/room-6.jpg')}}" alt="">
-<div class="ri-text">
-<h4>Small View</h4>
-<h3>₹1590<span>/Pernight</span></h3>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 2</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="{{route('roomsdetail')}}" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
+@endforeach
+
+
+
+
 <div class="col-lg-12">
 <div class="room-pagination">
 <a href="#">1</a>

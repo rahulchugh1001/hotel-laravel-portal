@@ -21,5 +21,22 @@ class Service extends Model
 
 	
 
+public static function getServiceDetail($id)
+        {
+        
+                        $user=Self::find($id);
+                        if($user)
+                        {
+                            return ucwords($user->name); 
+                        }else
+                            
+                            {
+                            
+                            return Null;
+                            }
+        
+        }
+
+
 
 }

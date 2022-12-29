@@ -60,29 +60,39 @@
 							 
 							 
                              <div class="col-6 form-group">
-                                <label class="form-label">name <span>*</span></label>
+                                <label class="form-label">Name <span>*</span></label>
                                 <input type="text" name="name" id="name" class="form-control 
                                 @error('name') is-invalid @enderror" value="{{ old('name') }}">
                             </div>
                             <div class="col-6 form-group">
-                                <label class="form-label">slug <span>*</span></label>
+                                <label class="form-label">Slug <span>*</span></label>
                                 <input type="text" name="slug" id="slug" class="form-control 
                                 @error('slug') is-invalid @enderror" value="{{ old('slug') }}">
                             </div>
                             <div class="col-6 form-group">
-                                <label class="form-label">size <span>*</span></label>
+                                <label class="form-label">Size <span>*</span></label>
                                 <input type="text" name="size" id="size" class="form-control 
                                 @error('size') is-invalid @enderror" value="{{ old('size') }}">
                             </div>
                             <div class="col-6 form-group">
-                                <label class="form-label">capacity <span>*</span></label>
+                                <label class="form-label">Capacity <span>*</span></label>
                                 <input type="text" name="capacity" id="capacity" class="form-control 
                                 @error('capacity') is-invalid @enderror" value="{{ old('capacity') }}">
                             </div>
                             <div class="col-6 form-group">
-                                <label class="form-label">bed <span>*</span></label>
+                                <label class="form-label">Bed <span>*</span></label>
                                 <input type="text" name="bed" id="bed" class="form-control 
                                 @error('bed') is-invalid @enderror" value="{{ old('bed') }}">
+                            </div>
+                            <div class="col-6 form-group">
+                                <label class="form-label">Price <span>*</span></label>
+                                <input type="number" name="price" id="price" class="form-control 
+                                @error('price') is-invalid @enderror" value="{{ old('price') }}">
+                            </div>
+                            <div class="col-6 form-group">
+                                <label class="form-label">Total Rooms <span>*</span></label>
+                                <input type="number" name="total_rooms" id="total_rooms" class="form-control 
+                                @error('total_rooms') is-invalid @enderror" value="{{ old('total_rooms') }}">
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label">Description <span>*</span></label>

@@ -78,10 +78,15 @@ use App\Http\Controllers\frontend\IndexController;
 Route::get('/',[IndexController::class,'index'])->name('index');
 Route::get('/about-us',[AboutUsController::class,'page'])->name('aboutus');
 Route::get('/our-rooms',[RoomController::class,'page'])->name('roomslist');
-Route::get('/room-detail',[RoomController::class,'Detail'])->name('roomsdetail');
+Route::any('/thank-you',[IndexController::class,'ThankYou'])->name('thankyou');
+Route::any('/room/detail/{slug}',[RoomController::class,'Detail'])->name('roomsdetail');
 Route::get('/contact-us',[ContactUsController::class, 'contactUs'])->name('contact_us');
 Route::get('/blog',[BlogController::class, 'blogIndex'])->name('blog');
 Route::get('/blog-detail',[BlogController::class, 'blogDetails'])->name('blog_details');
+Route::get('/mail-content',function(){
+  return view('user_mail');
+});
+
 
 
 Auth::routes();

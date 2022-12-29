@@ -24,10 +24,59 @@
                 </div>
                 <div class="menu-title">Profle</div>
               </a>
-              <ul>
-                <li> <a href="app-emailbox.html"><i class="bi bi-circle"></i>Agency Profle</a>
-                </li>
-              </ul>
+              
+            </li>
+            <li>
+              <a href="{{route('blog_category_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Blog Category</div>
+              </a>
+              
+            </li>
+            
+             <li>
+              <a href="{{route('blog_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Blog</div>
+              </a>
+              
+            </li>
+
+             <li>
+              <a href="{{route('slider_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Slider</div>
+              </a>
+              
+            </li>
+
+             <li>
+              <a href="{{route('service_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Service</div>
+              </a>
+              
+            </li>
+
+             <li>
+              <a href="{{route('room_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Room List</div>
+              </a>
+              
+            </li>
+             <li>
+              <a href="{{route('lead_room_query_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Room Query Leads</div>
+              </a>
+              
             </li>
             
 			 

@@ -29,7 +29,6 @@ class ServiceController extends Controller
             return view('backend.service.create',$data);
         }else{
           
-
           $values = $request->all(); 
           $values['status'] = $request->status ? $request->status : 0;
           if(isset($values['_token'])){

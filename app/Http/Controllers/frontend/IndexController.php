@@ -11,4 +11,9 @@ class IndexController extends Controller
     {
         return view('frontend.index');
     }
+
+    public function ThankYou()
+    {
+        return view('frontend.thankyou');
+    }
 }
