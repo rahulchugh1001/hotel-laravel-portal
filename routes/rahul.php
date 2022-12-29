@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\SliderController;
 use App\Http\Controllers\backend\ServiceController;
 use App\Http\Controllers\backend\RoomController;
+use App\Http\Controllers\backend\TestimonialController;
 use App\Http\Controllers\backend\LeadController;
 
 Route::group(['prefix'=>'slider','as'=>'slider_'],function(){
@@ -26,6 +27,13 @@ Route::get('/list',[RoomController::class, 'list'])->name('list');
 Route::any('/create',[RoomController::class, 'Add'])->name('add');
 Route::any('/edit/{id}',[RoomController::class, 'Edit'])->name('edit');
 Route::any('/delete/{id}',[RoomController::class, 'Delete'])->name('delete');
+});
+
+Route::group(['prefix'=>'testimonial','as'=>'testimonial_'],function(){
+Route::get('/list',[TestimonialController::class, 'list'])->name('list');
+Route::any('/create',[TestimonialController::class, 'Add'])->name('add');
+Route::any('/edit/{id}',[TestimonialController::class, 'Edit'])->name('edit');
+Route::any('/delete/{id}',[TestimonialController::class, 'Delete'])->name('delete');
 });
 
 

@@ -78,6 +78,14 @@
               </a>
               
             </li>
+            <li>
+              <a href="{{route('testimonial_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Testimonial</div>
+              </a>
+              
+            </li>
             
 			 
 		
