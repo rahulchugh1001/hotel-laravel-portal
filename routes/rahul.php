@@ -38,11 +38,15 @@ Route::any('/delete/{id}',[TestimonialController::class, 'Delete'])->name('delet
 
 
 Route::group(['prefix'=>'leads','as'=>'lead_'],function(){
-
+Route::any('/delete/{id}',[LeadController::class, 'DeleteLead'])->name('delete');
 Route::group(['prefix'=>'room-query','as'=>'room_query_'],function(){
 Route::get('/list',[LeadController::class, 'RoomQuerylist'])->name('list');
 Route::any('/view/{id}',[LeadController::class, 'RoomQueryView'])->name('view');
-Route::any('/delete/{id}',[LeadController::class, 'Delete'])->name('delete');
+});
+
+Route::group(['prefix'=>'home-slider-query','as'=>'home_slider_query_'],function(){
+Route::get('/list',[LeadController::class, 'HomeSliderQuerylist'])->name('list');
+Route::any('/view/{id}',[LeadController::class, 'HomeSliderQueryView'])->name('view');
 });
 
 

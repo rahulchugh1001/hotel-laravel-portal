@@ -33,8 +33,6 @@
                             <th>S.no</th>
                             <th>Name</th>
                             <th>Phone</th>
-                            <th>Email</th>
-                            <th>Room</th>
                             <th>Seen</th>
                             <th>Action</th>
                         </tr>
@@ -45,13 +43,7 @@
                             <td>{{$index + 1}}</td>
                             <td>{{$value->name}}</td>
                             <td>{{$value->phone}}</td>
-                            <td>{{$value->email}}</td>
-                            <td>
-                                @if($value->RoomRelation)
-                                <a target="_blank" class="text-dark" href="{{route('room_edit',encrypt($value->RoomRelation->id))}}">{{$value->RoomRelation->name}}</a>
-                                @else
-                                No Room Found
-                                @endif
+                            
                                 <td>
                                     @if($value->seen)
                                     <i class="text-success fa fa-check"></i>
@@ -60,7 +52,7 @@
                                     @endif
                                 </td>
                             <td>
-                                <a href="{{route('lead_room_query_view',encrypt($value->id))}}"><i class="bi bi-eye"></i></a>
+                                <a href="{{route('lead_home_slider_query_view',encrypt($value->id))}}"><i class="bi bi-eye"></i></a>
                             
                                 <a class="text-danger" data-bs-toggle="modal" data-bs-target="#delete{{$index}}" 
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" category="" 
@@ -77,7 +69,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="alert-body">
-                                        <form action="{{route('lead_delete',encrypt($value->id))}}">
+                                        <form action="{{route('lead__delete',encrypt($value->id))}}">
                                             @csrf
                                         <i class="bi bi-exclamation-circle"></i>
                                         <h5 class="modal-category">Alert</h5>

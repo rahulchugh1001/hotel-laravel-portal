@@ -19,6 +19,7 @@ class IndexController extends Controller
          if($values['_token']){
             unset($values['_token']);
          }
+         $values['type'] = 2;
 
             RoomQuery::insert($values);
             $this->sendMailToAdmin($values);

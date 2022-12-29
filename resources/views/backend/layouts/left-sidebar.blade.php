@@ -79,6 +79,14 @@
               
             </li>
             <li>
+              <a href="{{route('lead_home_slider_query_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Home Slider Query Leads</div>
+              </a>
+              
+            </li>
+            <li>
               <a href="{{route('testimonial_list')}}">
                 <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
                 </div>
