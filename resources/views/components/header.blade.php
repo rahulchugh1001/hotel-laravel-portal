@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>SP Residence</title>
-
+   <link rel="icon" href="{{asset('frontend/img/logo.png')}}" type="image/png" />
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&amp;display=swap" rel="stylesheet">
 
@@ -58,10 +58,10 @@
 </nav>
 <div id="mobile-menu-wrap"></div>
 <div class="top-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-tripadvisor"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
 </div>
 <ul class="top-widget">
 <li><i class="fa fa-phone"></i> (12) 345 67890</li>
@@ -83,10 +83,10 @@
 <div class="col-lg-6">
 <div class="tn-right">
 <div class="top-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-tripadvisor"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
 </div>
 <a href="{{route('contact_us')}}" class="bk-btn">Booking Now</a>
 <div class="language-option">

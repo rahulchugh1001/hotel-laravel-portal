@@ -26,7 +26,8 @@ class RoomController extends Controller
                 'check_in'=>$value['check_in'] ? $value['check_in'] : 'Not Mentioned',
                 'check_out'=>$value['check_out'] ? $value['check_out'] : 'Not Mentioned',
                 'guest'=>$value['guest'] ? $value['guest'] : 'Not Mentioned',
-                'rooms'=>$value['rooms'] ? $value['rooms'] : 'Not Mentioned'
+                'rooms'=>$value['rooms'] ? $value['rooms'] : 'Not Mentioned',
+                'type'=>'Room Detail Page Lead',
             );
         Mail::send(['html'=>'admin_mail'], $data, function($message) {
          $message->to('chughrahul1999@gmail.com', 'SP Residency')->subject
@@ -55,8 +56,6 @@ class RoomController extends Controller
     }
 
     public function Detail(Request $request,$slug){
-
-
        
         $data['room'] = Room::where('status',1)->where('slug',$slug)->first();
         if($data['room'] == false){
@@ -77,7 +76,9 @@ class RoomController extends Controller
             RoomQuery::insert($values);
             $values['room_name'] = $data['room']->name;
             $this->sendMailToAdmin($values);
+            if($values['email']){
             $this->sendMailToUser($values);
+            }
             return redirect()->route('thankyou');
         }
 

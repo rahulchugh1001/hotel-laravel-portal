@@ -11,6 +11,7 @@ class RoomQuery extends Model
     
     
     protected $fillable = array('name',
+                                'room_queries',
                                 'room_id',
                                 'email',
                                 'check_in',

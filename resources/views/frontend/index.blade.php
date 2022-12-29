@@ -14,32 +14,28 @@ travel and for finding low-priced hotel rooms.</p>
 <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
 <div class="booking-form">
 <h3>Booking Your Hotel</h3>
-<form action="#">
+<form method="post">
+	@csrf
+<div class="check-date">
+<label for="date-in">Name:</label>
+<input type="text" placeholder="Your Name" required class="form-control" name="name" >
+</div>
+<div class="check-date">
+<label for="date-out">Phone:</label>
+<input type="number" placeholder="Your Mobile Number" class="form-control" name="phone" >
+</div>
 <div class="check-date">
 <label for="date-in">Check In:</label>
-<input type="text" class="date-input" id="date-in">
+<input type="text" class="date-input" placeholder="Check In" id="date-in" name="check_in">
 <i class="icon_calendar"></i>
 </div>
 <div class="check-date">
 <label for="date-out">Check Out:</label>
-<input type="text" class="date-input" id="date-out">
+<input type="text" class="date-input" placeholder="Check Out" id="date-out" name="check_out">
 <i class="icon_calendar"></i>
 </div>
-<div class="select-option">
-<label for="guest">Guests:</label>
-<select id="guest">
-<option value="">2 Adults</option>
-<option value="">3 Adults</option>
-</select>
-</div>
-<div class="select-option">
-<label for="room">Room:</label>
-<select id="room">
-<option value="">1 Room</option>
-<option value="">2 Room</option>
-</select>
-</div>
-<button type="submit">Check Availability</button>
+
+<button type="submit">Submit Details</button>
 </form>
 </div>
 </div>

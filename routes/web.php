@@ -26,7 +26,7 @@ use App\Http\Controllers\frontend\IndexController;
 // Route::any('/', function () {
 //     return view('frontend.index');
 // })->name('index');
-Route::get('/',[IndexController::class,'index'])->name('index');
+Route::any('/',[IndexController::class,'index'])->name('index');
 Route::get('/about-us',[AboutUsController::class,'page'])->name('aboutus');
 Route::get('/our-rooms',[RoomController::class,'page'])->name('roomslist');
 Route::any('/thank-you',[IndexController::class,'ThankYou'])->name('thankyou');

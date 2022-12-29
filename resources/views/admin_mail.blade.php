@@ -116,6 +116,12 @@
                                                         Rooms:</td>
                                                     <td style="padding: 10px; color: #455056;">{{$rooms}}</td>
                                                 </tr>
+                                                 <tr>
+                                                    <td
+                                                        style="padding: 10px; border-right: 1px solid #ededed; width: 35%;font-weight:500; color:rgba(0,0,0,.64)">
+                                                        Type:</td>
+                                                    <td style="padding: 10px; color: #455056;">{{$type}}</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </td>
