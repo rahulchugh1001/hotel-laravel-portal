@@ -1,9 +1,5 @@
 @include('backend.layouts.header')
-<!--start sidebar -->
-
-@if(auth()->user())
 @include('backend.layouts.left-sidebar')
-@endif
        <!--end sidebar -->
 
        <!--start content-->

@@ -5,14 +5,18 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Mail;
+use App\Models\Room;
 use App\Models\RoomQuery;
 
 class IndexController extends Controller
 {
     public function index(Request $request)
     {
+
+        $data['room'] = Room::where('status',1)->orderBy('name','ASC')->latest()->limit(4)->get();
+
         if($request->isMethod('get')){
-        return view('frontend.index');
+        return view('frontend.index',$data);
         }else{
             $values = $request->all();
 

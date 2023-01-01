@@ -1,6 +1,11 @@
 <x-header />
 
 <section class="hero-section">
+	<div class="hero-slider owl-carousel">
+<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-1.jpg"></div>
+<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-2.jpg"></div>
+<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-3.jpg"></div>
+</div>
 <div class="container">
 <div class="row">
 <div class="col-lg-6">
@@ -41,11 +46,7 @@ travel and for finding low-priced hotel rooms.</p>
 </div>
 </div>
 </div>
-<div class="hero-slider owl-carousel">
-<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-1.jpg"></div>
-<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-2.jpg"></div>
-<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-3.jpg"></div>
-</div>
+
 </section>
 
 
@@ -152,122 +153,39 @@ labore et dolore magna.</p>
 <div class="container-fluid">
 <div class="hp-room-items">
 <div class="row">
+@foreach($room as $data)
 <div class="col-lg-3 col-md-6">
-<div class="hp-room-item set-bg" data-setbg="frontend/img/room/room-b1.jpg">
+<div class="hp-room-item set-bg" data-setbg="{{url('/')}}/{{$data->background_image}}">
 <div class="hr-text">
-<h3>Double Room</h3>
-<h2>199$<span>/Pernight</span></h2>
+<h3>{{$data->name}}</h3>
+<h2>₹{{number_format($data->price)}}<span>/Pernight</span></h2>
 <table>
 <tbody>
 <tr>
 <td class="r-o">Size:</td>
-<td>30 ft</td>
+<td>{{$data->size}}</td>
 </tr>
 <tr>
 <td class="r-o">Capacity:</td>
-<td>Max persion 5</td>
+<td>{{$data->capacity}}</td>
 </tr>
 <tr>
 <td class="r-o">Bed:</td>
-<td>King Beds</td>
+<td>{{$data->bed}}</td>
 </tr>
 <tr>
 <td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
+<td>@for($i = 0; $i <= 1; $i++)
+    @if($i),@endif  {{App\Models\Service::getServiceDetail(json_decode($data->service)[$i])}} 
+    @endfor </td>
 </tr>
 </tbody>
 </table>
-<a href="#" class="primary-btn">More Details</a>
+<a href="{{route('roomsdetail',$data->slug)}}" class="primary-btn">More Details</a>
 </div>
 </div>
 </div>
-<div class="col-lg-3 col-md-6">
-<div class="hp-room-item set-bg" data-setbg="frontend/img/room/room-b2.jpg">
-<div class="hr-text">
-<h3>Premium King Room</h3>
-<h2>159$<span>/Pernight</span></h2>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 5</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="#" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="hp-room-item set-bg" data-setbg="frontend/img/room/room-b3.jpg">
-<div class="hr-text">
-<h3>Deluxe Room</h3>
-<h2>198$<span>/Pernight</span></h2>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 5</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="#" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="hp-room-item set-bg" data-setbg="frontend/img/room/room-b4.jpg">
-<div class="hr-text">
-<h3>Family Room</h3>
-<h2>299$<span>/Pernight</span></h2>
-<table>
-<tbody>
-<tr>
-<td class="r-o">Size:</td>
-<td>30 ft</td>
-</tr>
-<tr>
-<td class="r-o">Capacity:</td>
-<td>Max persion 5</td>
-</tr>
-<tr>
-<td class="r-o">Bed:</td>
-<td>King Beds</td>
-</tr>
-<tr>
-<td class="r-o">Services:</td>
-<td>Wifi, Television, Bathroom,...</td>
-</tr>
-</tbody>
-</table>
-<a href="#" class="primary-btn">More Details</a>
-</div>
-</div>
-</div>
+@endforeach
 </div>
 </div>
 </div>

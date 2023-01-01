@@ -10,9 +10,15 @@ use Mail;
 class RoomController extends Controller
 {
     
-    public function page(){
+    public function page(Request $request){
 
-        $data['room'] = Room::where('status',1)->orderBy('name','ASC')->get();
+        $data['room'] = Room::where('status',1)->orderBy('name','ASC');
+
+        if($request->search){
+            $data['room']->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        $data['room'] = $data['room']->get();
 
         return view('frontend.rooms',$data);
     }
