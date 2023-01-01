@@ -64,8 +64,8 @@
 <a href="#"><i class="fa-brands fa-twitter"></i></a>
 </div>
 <ul class="top-widget">
-<li><i class="fa fa-phone"></i> (12) 345 67890</li>
-<li><i class="fa fa-envelope"></i> <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">info@spresidence.com</a></li>
+<li><i class="fa fa-phone"></i><a class="text-dark" href="tel:+91 8595625687"> +91 8595625687</a></li>
+<li><i class="fa fa-envelope"></i> <a href="mailto:spregency123@gmail.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">spregency123@gmail.com</a></li>
 </ul>
 </div>
 
@@ -76,8 +76,8 @@
 <div class="row">
 <div class="col-lg-6">
 <ul class="tn-left">
-<li><i class="fa fa-phone"></i> (12) 345 67890</li>
-<li><i class="fa fa-envelope"></i> <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a23242c256429252625382623280a2d272b232664292527">info@spresidence.com</a></li>
+<li><i class="fa fa-phone"></i><a class="text-dark" href="tel:+91 8595625687"> +91 8595625687</a></li>
+<li><i class="fa fa-envelope"></i> <a href="mailto:spregency123@gmail.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">spregency123@gmail.com</a></li>
 </ul>
 </div>
 <div class="col-lg-6">

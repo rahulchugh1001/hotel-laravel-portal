@@ -11,11 +11,10 @@
 </div>
 <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
 <div class="fa-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-tripadvisor"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa-youtube-play"></i></a>
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-youtube-play"></i></a>
 </div>
 </div>
 </div>
@@ -23,10 +22,10 @@
 <div class="ft-contact">
 <h6>Contact Us</h6>
 <ul>
-<li>(12) 345 67890</li>
-<li><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
-     data-cfemail="5d34333b32733e3231322f31343f1d3a303c3431733e3230">info@spresidence.com</a></li>
-<li>856 Cordia Extension Apt. 356, Lake, United State</li>
+<li> +91 8595625687</li>
+<li><a href="mailto:spregency123@gmail.com" class="__cf_email__"
+     data-cfemail="5d34333b32733e3231322f31343f1d3a303c3431733e3230">spregency123@gmail.com</a></li>
+<li>HMF3+MJ4, Vrindavan, Uttar Pradesh 281121, INDIA</li>
 </ul>
 </div>
 </div>
@@ -46,18 +45,11 @@
 <div class="copyright-option">
 <div class="container">
 <div class="row">
-<div class="col-lg-7">
-<ul>
-<li><a href="#">Contact</a></li>
-<li><a href="#">Terms of use</a></li>
-<li><a href="#">Privacy</a></li>
-<li><a href="#">Environmental Policy</a></li>
-</ul>
-</div>
-<div class="col-lg-5">
-<div class="co-text"><p>
-Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-</p></div>
+<div class="col-lg-12">
+<div class="co-text">
+     <p class="text-center">
+Copyright &copy;
+{{date('Y')}} All rights reserved  by SP Residence</p></div>
 </div>
 </div>
 </div>
