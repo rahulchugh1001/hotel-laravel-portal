@@ -4,27 +4,23 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="contact-text">
-<h2>Contact Info</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua.</p>
+<h2>Contact SP Residence</h2>
+<p>We're here to help and answer any question you might have.We look forward to hearing from you.</p>
 <table>
 <tbody>
 <tr>
-<td class="c-o">Address:</td>
-<td>856 Cordia Extension Apt. 356, Lake, US</td>
+<th >Address:</th>
+<td class="c-o">HMF3+MJ4, Vrindavan, Uttar Pradesh 281121, INDIA</td>
 </tr>
 <tr>
-<td class="c-o">Phone:</td>
-<td>(12) 345 67890</td>
+<th >Phone:</th>
+<td class="c-o">+91 8595625687</td>
 </tr>
 <tr>
-<td class="c-o">Email:</td>
-<td><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="157c7b737a3b767a797a67797c77557278747c793b767a78">[email&#160;protected]</a></td>
+<th>Email:</th>
+<td class="c-o "><a style="color: #707079;" href="mailto:spregency123@gmail.com">spregency123@gmail.com</a></td>
 </tr>
-<tr>
-<td class="c-o">Fax:</td>
-<td>+(12) 345 67890</td>
-</tr>
+
 </tbody>
 </table>
 </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Mail;
 use App\Models\Room;
 use App\Models\RoomQuery;
+use App\Models\Service;
 
 class IndexController extends Controller
 {
@@ -14,6 +15,7 @@ class IndexController extends Controller
     {
 
         $data['room'] = Room::where('status',1)->orderBy('name','ASC')->latest()->limit(4)->get();
+        $data['service'] = Service::where('status',1)->orderBy('name','ASC')->latest()->get();
 
         if($request->isMethod('get')){
         return view('frontend.index',$data);

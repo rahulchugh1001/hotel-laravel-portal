@@ -95,55 +95,16 @@ apartment, guest house, or tree house, we’ve got you covered.</p>
 </div>
 </div>
 <div class="row">
+	@foreach($service as $ser)
 <div class="col-lg-4 col-sm-6">
 <div class="service-item">
-<i class="flaticon-036-parking"></i>
+<i class="h1 {{$ser->icon}}"></i>
 
-<h4>Travel Plan</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna.</p>
+<h4><b>{{ucwords($ser->name)}}</b></h4>
+<p><strong>{{ucfirst(Str::limit($ser->short_description,100))}}</strong></p>
 </div>
 </div>
-<div class="col-lg-4 col-sm-6">
-<div class="service-item">
-<i style="font-size: 60px;" class="fa-solid fa-utensils"></i>
-<h4>Catering Service</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna.</p>
-</div>
-</div>
-<div class="col-lg-4 col-sm-6">
-<div class="service-item">
-<i class="flaticon-026-bed"></i>
-<h4>Babysitting</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna.</p>
-</div>
-</div>
-<div class="col-lg-4 col-sm-6">
-<div class="service-item">
-<i class="flaticon-024-towel"></i>
-<h4>Laundry</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna.</p>
-</div>
-</div>
-<div class="col-lg-4 col-sm-6">
-<div class="service-item">
-<i class="flaticon-044-clock-1"></i>
-<h4>Hire Driver</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna.</p>
-</div>
-</div>
-<div class="col-lg-4 col-sm-6">
-<div class="service-item">
-<i class="flaticon-012-cocktail"></i>
-<h4>Bar & Drink</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna.</p>
-</div>
-</div>
+@endforeach
 </div>
 </div>
 </section>

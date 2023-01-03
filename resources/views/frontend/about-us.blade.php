@@ -8,7 +8,7 @@
 <div class="breadcrumb-text">
 <h2>About Us</h2>
 <div class="bt-option">
-<a href="#">Home</a>
+<a href="{{url('/')}}">Home</a>
 <span>About Us</span>
 </div>
 </div>
