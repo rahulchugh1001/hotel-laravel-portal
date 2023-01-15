@@ -23,7 +23,7 @@
 <h6>Contact Us</h6>
 <ul>
 <li> +91 8595625687</li>
-<li><a href="mailto:spregency123@gmail.com" class="__cf_email__">spregency123@gmail.com</a></li>
+<li><a href="mailto:info@spresidence.com" class="__cf_email__">info@spresidence.com</a></li>
 <li>HMF3+MJ4, Vrindavan, Uttar Pradesh 281121, INDIA</li>
 </ul>
 </div>

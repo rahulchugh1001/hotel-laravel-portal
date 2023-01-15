@@ -36,7 +36,7 @@ class RoomController extends Controller
                 'type'=>'Room Detail Page Lead',
             );
         Mail::send(['html'=>'admin_mail'], $data, function($message) {
-         $message->to('chughrahul1999@gmail.com', 'SP Residency')->subject
+         $message->to('spregency123@gmail.com', 'SP Residency')->subject
             ('One More Lead');
          $message->from('no-reply@spresidence.com','Admin');
       });

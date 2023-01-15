@@ -8,6 +8,8 @@ use Mail;
 use App\Models\Room;
 use App\Models\RoomQuery;
 use App\Models\Service;
+use App\Models\Slider;
+use App\Models\Testimonial;
 
 class IndexController extends Controller
 {
@@ -16,7 +18,9 @@ class IndexController extends Controller
 
         $data['room'] = Room::where('status',1)->orderBy('name','ASC')->latest()->limit(4)->get();
         $data['service'] = Service::where('status',1)->orderBy('name','ASC')->latest()->get();
-
+        $data['slider'] = Slider::where('status',1)->latest()->get();
+        $data['testimonial'] = Testimonial::where('status',1)->latest()->get();
+        
         if($request->isMethod('get')){
         return view('frontend.index',$data);
         }else{
@@ -49,7 +53,7 @@ class IndexController extends Controller
                 'type'=>'Home Slider Lead',
             );
         Mail::send(['html'=>'admin_mail'], $data, function($message) {
-         $message->to('chughrahul1999@gmail.com', 'SP Residency')->subject
+         $message->to('spregency123@gmail.com', 'SP Residency')->subject
             ('One More Lead');
          $message->from('no-reply@spresidence.com','Admin');
       });

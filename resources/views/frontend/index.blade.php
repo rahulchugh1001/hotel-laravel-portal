@@ -2,9 +2,11 @@
 
 <section class="hero-section">
 	<div class="hero-slider owl-carousel">
-<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-1.jpg"></div>
-<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-2.jpg"></div>
-<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-3.jpg"></div>
+		@foreach($slider as $slider)
+<div class="hs-item set-bg" data-setbg="{{url('/')}}/{{$slider->image}}"></div>
+@endforeach
+{{-- <div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-2.jpg"></div>
+<div class="hs-item set-bg" data-setbg="frontend/img/hero/hero-3.jpg"></div> --}}
 </div>
 <div class="container">
 <div class="row">
@@ -166,40 +168,29 @@ apartment, guest house, or tree house, we’ve got you covered.</p>
 <div class="row">
 <div class="col-lg-8 offset-lg-2">
 <div class="testimonial-slider owl-carousel">
+
+@foreach($testimonial as $test)
 <div class="ts-item">
-<p>After a construction project took longer than expected, my husband, my daughter and I
-needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-city, neighborhood and the types of housing options available and absolutely love our
-vacation at SPResidence Hotel.</p>
+<p>{{$test->review}}</p>
 <div class="ti-author">
 <div class="rating">
+@for($i = 1; $i <= round($test->rating,0,2); $i++)
 <i class="icon_star"></i>
-<i class="icon_star"></i>
-<i class="icon_star"></i>
-<i class="icon_star"></i>
+@endfor
+@if(fmod($test->rating,1))
 <i class="icon_star-half_alt"></i>
+@endif
 </div>
-<h5> - Alexander Vasquez</h5>
+<h5> - {{$test->name}}</h5>
 </div>
-<img src="frontend/img/testimonial-logo.png" alt="">
+@if(File::exists("$test->image"))
+<img src="{{url('/')}}/{{$test->image}}" width="79px" height="49px" alt="">
+@else
+<img src="{{asset('user.jpg')}}" width="79px" height="49px" alt="">
+@endif
 </div>
-<div class="ts-item">
-<p>After a construction project took longer than expected, my husband, my daughter and I
-needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-city, neighborhood and the types of housing options available and absolutely love our
-vacation at SPResidence Hotel.</p>
-<div class="ti-author">
-<div class="rating">
-<i class="icon_star"></i>
-<i class="icon_star"></i>
-<i class="icon_star"></i>
-<i class="icon_star"></i>
-<i class="icon_star-half_alt"></i>
-</div>
-<h5> - Alexander Vasquez</h5>
-</div>
-<img src="frontend/img/testimonial-logo.png" alt="">
-</div>
+@endforeach
+
 </div>
 </div>
 </div>

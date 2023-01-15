@@ -65,7 +65,7 @@
 </div>
 <ul class="top-widget">
 <li><i class="fa fa-phone"></i><a class="text-dark" href="tel:+91 8595625687"> +91 8595625687</a></li>
-<li><i class="fa fa-envelope"></i> <a href="mailto:spregency123@gmail.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">spregency123@gmail.com</a></li>
+<li><i class="fa fa-envelope"></i> <a href="mailto:info@spresidence.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">info@spresidence.com</a></li>
 </ul>
 </div>
 
@@ -77,7 +77,7 @@
 <div class="col-lg-6">
 <ul class="tn-left">
 <li><i class="fa fa-phone"></i><a class="text-dark" href="tel:+91 8595625687"> +91 8595625687</a></li>
-<li><i class="fa fa-envelope"></i> <a href="mailto:spregency123@gmail.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">spregency123@gmail.com</a></li>
+<li><i class="fa fa-envelope"></i> <a href="mailto:info@spresidence.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">info@spresidence.com</a></li>
 </ul>
 </div>
 <div class="col-lg-6">
