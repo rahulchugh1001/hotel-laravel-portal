@@ -32,6 +32,7 @@ Route::get('/our-rooms',[RoomController::class,'page'])->name('roomslist');
 Route::any('/thank-you',[IndexController::class,'ThankYou'])->name('thankyou');
 Route::any('/room/detail/{slug}',[RoomController::class,'Detail'])->name('roomsdetail');
 Route::get('/contact-us',[ContactUsController::class, 'contactUs'])->name('contact_us');
+Route::post('/formSubmit',[ContactUsController::class, 'formSubmit'])->name('formSubmit');
 Route::get('/blog',[BlogController::class, 'blogIndex'])->name('blog');
 Route::get('/blog-detail',[BlogController::class, 'blogDetails'])->name('blog_details');
 Route::get('/mail-content',function(){

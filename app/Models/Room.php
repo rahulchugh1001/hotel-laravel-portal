@@ -19,7 +19,8 @@ class Room extends Model
                                 'bed',
                                 'service',
                                 'description',
-                                'status'
+                                'status',
+                                'price'
                                 );
 
     protected $table = 'rooms';

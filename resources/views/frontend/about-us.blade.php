@@ -24,53 +24,50 @@
 <div class="row">
 <div class="col-lg-6">
 <div class="ap-title">
-<h2>Welcome To SP Residence.</h2>
-<p>Built in 1910 during the Belle Epoque period, this hotel is located in the center of
-Paris, with easy access to the city’s tourist attractions. It offers tastefully
-decorated rooms.</p>
+<h2>{{$about->title}}</h2>
+<p>{{$about->description}}</p>
 </div>
 </div>
 <div class="col-lg-5 offset-lg-1">
 <ul class="ap-services">
-<li><i class="icon_check"></i> 20% Off On Accommodation.</li>
-<li><i class="icon_check"></i> Complimentary Daily Breakfast</li>
-<li><i class="icon_check"></i> 3 Pcs Laundry Per Day</li>
-<li><i class="icon_check"></i> Free Wifi.</li>
-<li><i class="icon_check"></i> Discount 20% On F&B</li>
+    @foreach($service as $ser)
+<li><i class="icon_check"></i>{{$ser->name}}</li>
+@endforeach
 </ul>
 </div>
 </div>
 </div>
-<div class="about-page-services">
-<div class="row">
-<div class="col-md-4">
+<!-- <div class="about-page-services">
+<div class="row"> -->
+<!-- <div class="col-md-4">
 <div class="ap-service-item set-bg" data-setbg="{{asset('frontend/img/about/about-p1.jpg')}}">
 <div class="api-text">
 <h3>Restaurants Services</h3>
 </div>
 </div>
-</div>
-<div class="col-md-4">
+</div> -->
+<!-- <div class="col-md-4">
 <div class="ap-service-item set-bg" data-setbg="{{asset('frontend/img/about/about-p2.jpg')}}">
 <div class="api-text">
 <h3>Travel & Camping</h3>
 </div>
 </div>
-</div>
-<div class="col-md-4">
-<div class="ap-service-item set-bg" data-setbg="{{asset('frontend/img/about/about-p3.jpg')}}">
-<div class="api-text">
+</div> -->
+<!-- <div class="col-md-4"> -->
+<!-- <div class="ap-service-item set-bg" data-setbg="{{asset('frontend/img/about/about-p3.jpg')}}"> -->
+<!-- <div class="api-text">
 <h3>Event & Party</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div>
+</div> -->
 </div>
 </section>
 
+<!-- youtube video portion -->
 
-<section class="video-section set-bg" data-setbg="{{asset('frontend/img/video-bg.jpg')}}">
+<!-- <section class="video-section set-bg" data-setbg="{{asset('frontend/img/video-bg.jpg')}}">
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
@@ -84,7 +81,7 @@ decorated rooms.</p>
 </div>
 </div>
 </section>
-
+ -->
 
 <section class="gallery-section spad">
 <div class="container">
@@ -98,21 +95,21 @@ decorated rooms.</p>
 </div>
 <div class="row">
 <div class="col-lg-6">
-<div class="gallery-item set-bg" data-setbg="{{asset('frontend/img/gallery/gallery-1.jpg')}}">
+<a href="{{route('roomslist')}}"><div class="gallery-item set-bg" data-setbg="{{asset('frontend/img/hotel1.jpg')}}">
 <div class="gi-text">
 <h3>Room Luxury</h3>
 </div>
 </div>
 <div class="row">
 <div class="col-sm-6">
-<div class="gallery-item set-bg" data-setbg="{{asset('frontend/img/gallery/gallery-3.jpg')}}">
+<div class="gallery-item set-bg" data-setbg="{{asset('frontend/img/hotel2.jpg')}}">
 <div class="gi-text">
 <h3>Room Luxury</h3>
 </div>
 </div>
 </div>
 <div class="col-sm-6">
-<div class="gallery-item set-bg" data-setbg="{{asset('frontend/img/gallery/gallery-4.jpg')}}">
+<div class="gallery-item set-bg" data-setbg="{{asset('frontend/img/hotel3.jpg')}}">
 <div class="gi-text">
 <h3>Room Luxury</h3>
 </div>
@@ -121,9 +118,9 @@ decorated rooms.</p>
 </div>
 </div>
 <div class="col-lg-6">
-<div class="gallery-item large-item set-bg" data-setbg="{{asset('frontend/img/gallery/gallery-2.jpg')}}">
+<div class="gallery-item large-item set-bg" data-setbg="{{asset('frontend/img/hotel4.jpg')}}">
 <div class="gi-text">
-<h3>Room Luxury</h3>
+<h3>Room Luxury</h3></a>
 </div>
 </div>
 </div>

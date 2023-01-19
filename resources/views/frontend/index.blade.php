@@ -198,7 +198,7 @@ apartment, guest house, or tree house, we’ve got you covered.</p>
 </section>
 
 
-<section class="blog-section spad">
+<!-- <section class="blog-section spad">
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
@@ -256,6 +256,6 @@ apartment, guest house, or tree house, we’ve got you covered.</p>
 </div>
 </div>
 </div>
-</section>
+</section> -->
 
 <x-footer />

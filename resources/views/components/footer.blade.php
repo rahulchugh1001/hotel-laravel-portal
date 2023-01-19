@@ -9,7 +9,7 @@
 <img src="{{asset('frontend/img/logo.png')}}" alt="">
 </a>
 </div>
-<p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
+<!-- <p>We inspire and reach millions of travelers<br /> across 90 local websites</p> -->
 <div class="fa-social">
 <a href="#"><i class="fa-brands fa-facebook"></i></a>
 <a href="#"><i class="fa-brands fa-twitter"></i></a>

@@ -52,7 +52,7 @@
 <li><a href="{{route('roomslist')}}">Rooms</a></li>
 <li><a href="{{route('aboutus')}}">About Us</a></li>
 
-<li><a href="{{route('blog')}}">Blog</a></li>
+<!-- <li><a href="{{route('blog')}}">Blog</a></li> -->
 <li><a href="{{route('contact_us')}}">Contact</a></li>
 </ul>
 </nav>
@@ -114,7 +114,7 @@
 <li><a href="{{route('roomslist')}}">Rooms</a></li>
 <li><a href="{{route('aboutus')}}">About Us</a></li>
 
-<li><a href="{{route('blog')}}">Blog</a></li>
+<!-- <li><a href="{{route('blog')}}">Blog</a></li> -->
 <li><a href="{{route('contact_us')}}">Contact</a></li>
 </ul>
 </nav>

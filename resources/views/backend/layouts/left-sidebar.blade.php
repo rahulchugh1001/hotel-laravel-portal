@@ -18,15 +18,15 @@
                 <div class="menu-title">Dashboard</div>
               </a>              
             </li>
-            <li>
+            <!-- <li>
               <a href="#">
                 <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
                 </div>
                 <div class="menu-title">Profle</div>
               </a>
               
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
               <a href="{{route('blog_category_list')}}">
                 <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="menu-title">Blog</div>
               </a>
               
-            </li>
+            </li> -->
 
              <li>
               <a href="{{route('slider_list')}}">
@@ -94,7 +94,25 @@
               </a>
               
             </li>
-            
+
+            <li>
+              <a href="{{route('about_us_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">About Us</div>
+              </a>
+              
+            </li>
+
+            <li>
+              <a href="{{route('website_details_list')}}">
+                <div class="parent-icon"><i class="bi bi-file-person-fill"></i>
+                </div>
+                <div class="menu-title">Website Details</div>
+              </a>
+              
+            </li>
+
 			 
 		
 			 
