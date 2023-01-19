@@ -8,7 +8,7 @@
 <meta name="keywords" content="Sona, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>SP Residence</title>
+<title>{{getWebsiteDetail()->name}}</title>
    <link rel="icon" href="{{asset('frontend/img/logo.png')}}" type="image/png" />
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&amp;display=swap" rel="stylesheet">
@@ -58,14 +58,13 @@
 </nav>
 <div id="mobile-menu-wrap"></div>
 <div class="top-social">
-<a href="#"><i class="fa-brands fa-facebook"></i></a>
-<a href="#"><i class="fa-brands fa-youtube"></i></a>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-twitter"></i></a>
+<a href="{{getWebsiteDetail()->fb_link}}"><i class="fa-brands fa-facebook"></i></a>
+<a href="{{getWebsiteDetail()->channel_link}}"><i class="fa-brands fa-youtube"></i></a>
+<a href="{{getWebsiteDetail()->insta_link}}"><i class="fa-brands fa-instagram"></i></a>
 </div>
 <ul class="top-widget">
-<li><i class="fa fa-phone"></i><a class="text-dark" href="tel:+91 8595625687"> +91 8595625687</a></li>
-<li><i class="fa fa-envelope"></i> <a href="mailto:info@spresidence.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">info@spresidence.com</a></li>
+<li><i class="fa fa-phone"></i><a class="text-dark" href="tel:{{getWebsiteDetail()->phone}}"> {{getWebsiteDetail()->phone}}</a></li>
+<li><i class="fa fa-envelope"></i> <a href="mailto:{{getWebsiteDetail()->email}}" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">{{getWebsiteDetail()->email}}</a></li>
 </ul>
 </div>
 
@@ -76,17 +75,16 @@
 <div class="row">
 <div class="col-lg-6">
 <ul class="tn-left">
-<li><i class="fa fa-phone"></i><a class="text-dark" href="tel:+91 8595625687"> +91 8595625687</a></li>
-<li><i class="fa fa-envelope"></i> <a href="mailto:info@spresidence.com" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">info@spresidence.com</a></li>
+<li><i class="fa fa-phone"></i><a class="text-dark" href="tel:{{getWebsiteDetail()->phone}}"> {{getWebsiteDetail()->phone}}</a></li>
+<li><i class="fa fa-envelope"></i> <a href="mailto:{{getWebsiteDetail()->email}}" class="__cf_email__" data-cfemail="8fe6e1e9e0a1ece0e3e0fde3e6edcfe8e2eee6e3a1ece0e2">{{getWebsiteDetail()->email}}</a></li>
 </ul>
 </div>
 <div class="col-lg-6">
 <div class="tn-right">
 <div class="top-social">
-<a href="#"><i class="fa-brands fa-facebook"></i></a>
-<a href="#"><i class="fa-brands fa-youtube"></i></a>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-twitter"></i></a>
+<a href="{{getWebsiteDetail()->fb_link}}"><i class="fa-brands fa-facebook"></i></a>
+<a href="{{getWebsiteDetail()->channel_link}}"><i class="fa-brands fa-youtube"></i></a>
+<a href="{{getWebsiteDetail()->insta_link}}"><i class="fa-brands fa-instagram"></i></a>
 </div>
 <a href="{{route('contact_us')}}" class="bk-btn">Booking Now</a>
 <div class="language-option">

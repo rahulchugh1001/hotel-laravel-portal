@@ -11,10 +11,9 @@
 </div>
 <!-- <p>We inspire and reach millions of travelers<br /> across 90 local websites</p> -->
 <div class="fa-social">
-<a href="#"><i class="fa-brands fa-facebook"></i></a>
-<a href="#"><i class="fa-brands fa-twitter"></i></a>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-youtube-play"></i></a>
+<a href="{{getWebsiteDetail()->fb_link}}"><i class="fa-brands fa-facebook"></i></a>
+<a href="{{getWebsiteDetail()->insta_link}}"><i class="fa-brands fa-instagram"></i></a>
+<a href="{{getWebsiteDetail()->channel_link}}"><i class="fa-brands fa-youtube-play"></i></a>
 </div>
 </div>
 </div>
@@ -22,9 +21,9 @@
 <div class="ft-contact">
 <h6>Contact Us</h6>
 <ul>
-<li> +91 8595625687</li>
-<li><a href="mailto:info@spresidence.com" class="__cf_email__">info@spresidence.com</a></li>
-<li>HMF3+MJ4, Vrindavan, Uttar Pradesh 281121, INDIA</li>
+<li>{{getWebsiteDetail()->phone}}</li>
+<li><a href="mailto:{{getWebsiteDetail()->email}}" class="__cf_email__">{{getWebsiteDetail()->email}}</a></li>
+<li>{{getWebsiteDetail()->address}}</li>
 </ul>
 </div>
 </div>
